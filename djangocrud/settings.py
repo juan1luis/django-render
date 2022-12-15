@@ -83,10 +83,10 @@ WSGI_APPLICATION = 'djangocrud.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'default': dj_database_url.config( default='postgres://djangocrud_2veq_user:d7P1qxRS3VbWaCEa2cPP8T5cLdMNMgZ2@dpg-ced7pj02i3mr7lnovqv0-a/djangocrud_2veq',
+    'default': dj_database_url.config( 
+        default='postgres://djangocrud_2veq_user:d7P1qxRS3VbWaCEa2cPP8T5cLdMNMgZ2@dpg-ced7pj02i3mr7lnovqv0-a/djangocrud_2veq',
         conn_max_age=600    )}
-    }
+
 
 
 
