@@ -8,18 +8,23 @@ from .forms import TaskForm
 from .models import Task
 from django.utils import timezone
 from django.contrib.auth.decorators import login_required
-from djangocrud.settings import (NUMERO,MSG)
+from django.conf import settings
+
 
 # Create your views here.
 
 def home(request):
+    NUMERO = settings.NUMERO_LOCAL
+    MENSAJE = settings.MSG_LOCAL
+
+
     mensaje = ''
     if request.method == 'GET':
         num = request.POST['numero']
         num = int(num)
         NUMERO = int(NUMERO)
         if num == NUMERO:
-            mensaje = MSG 
+            mensaje = MENSAJE
         else:
             mensaje= 'Numero incorrecto intenta de nuevo'
 

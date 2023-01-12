@@ -27,8 +27,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY', default='your secret key')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'RENDER' not in os.environ
 
-NUMERO = os.environ.get('NUMERO')
-MSG = os.environ.get('MSG')
+NUMERO_LOCAL = os.environ.get('NUMERO')
+MSG_LOCAL = os.environ.get('MSG')
 
 import socket
 
@@ -93,7 +93,6 @@ DATABASES = {
     'default': dj_database_url.config( 
         default='postgres://djangocrud_2veq_user:d7P1qxRS3VbWaCEa2cPP8T5cLdMNMgZ2@dpg-ced7pj02i3mr7lnovqv0-a/djangocrud_2veq',
         conn_max_age=600    )}
-
 
 
 
