@@ -8,11 +8,20 @@ from .forms import TaskForm
 from .models import Task
 from django.utils import timezone
 from django.contrib.auth.decorators import login_required
+from djangocrud.settings import (NUMERO,MSG)
 
 # Create your views here.
 
 def home(request):
-    return render(request,'home.html')
+    mensaje = ''
+    if request.method == 'GET':
+        num = request.POST['numero']
+        if num == NUMERO:
+            mensaje = MSG 
+        else:
+            mensaje= 'Numero incorrecto intenta de nuevo'
+
+    return render(request,'home.html',{'mensaje':mensaje})
 
 def signup(request):
 

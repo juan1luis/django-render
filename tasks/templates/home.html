@@ -4,8 +4,12 @@
     
 <main class="container py-5">
     <section class="card card-body">
-        <h1 class="display-1 text-center">Django App</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis distinctio molestiae corporis quibusdam commodi, animi, obcaecati at saepe temporibus odio libero quae harum amet porro a dolor veritatis, iusto voluptas.</p>
+        <h1 class="display-1 text-center">Aplicacion de Tareas</h1>
+        <p>Adivina el numero entre el 0 y el 10</p>
+        <form method="GET">
+            <input type="number" class="form-control">
+            <button type="submit">play</button>
+        </form>
 
         <div class="text-center">
             <a class = "btn btn-primary" href="{% url 'login' %}">
