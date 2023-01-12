@@ -16,6 +16,8 @@ def home(request):
     mensaje = ''
     if request.method == 'GET':
         num = request.POST['numero']
+        num = int(num)
+        NUMERO = int(NUMERO)
         if num == NUMERO:
             mensaje = MSG 
         else:
